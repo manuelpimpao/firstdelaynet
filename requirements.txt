@@ -1,0 +1,11 @@
+# Python 3.12.7
+numpy
+pandas
+scikit-learn
+joblib
+xgboost
+torch
+matplotlib
+PyYAML
+pyarrow
+pm4py
