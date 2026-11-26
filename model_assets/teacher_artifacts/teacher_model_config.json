@@ -1,1 +1,0 @@
-{"num_cats": {"concept:name": 9}, "num_num_features": 29, "d_model": 192, "n_heads": 4, "n_layers": 2, "d_ff": 384, "dropout": 0.2, "max_len": 100, "use_causal": false, "cat_emb_dim": 64, "pos_weight": null, "verbose": true, "log_every": 100, "prior_pos_rate": 0.330322265625, "norm_num_in_forward": true, "num_clip_value": 1000000.0, "logit_clip": null}
