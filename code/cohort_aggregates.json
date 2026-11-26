@@ -1,0 +1,351 @@
+{
+  "schema": "cohort_aggregates_v1",
+  "initial_subsystems": {
+    "SLS": {
+      "cases": 1155,
+      "delayed": 435,
+      "clean": 720,
+      "clean_alerts": 120,
+      "d5": {
+        "tp": 144,
+        "fp": 288,
+        "fn": 291
+      },
+      "d10_f1": 0.13610149942329874
+    },
+    "FTS": {
+      "cases": 930,
+      "delayed": 911,
+      "clean": 19,
+      "clean_alerts": 14,
+      "d5": {
+        "tp": 597,
+        "fp": 306,
+        "fn": 314
+      },
+      "d10_f1": 0.42778390297684676
+    },
+    "ZLS": {
+      "cases": 1527,
+      "delayed": 49,
+      "clean": 1478,
+      "clean_alerts": 5,
+      "d5": {
+        "tp": 1,
+        "fp": 7,
+        "fn": 48
+      },
+      "d10_f1": 0.0
+    }
+  },
+  "thresholds": {
+    "primary_soft_full": [
+      0.24,
+      0.35
+    ],
+    "observed_only_hard": [
+      0.36,
+      0.77
+    ],
+    "catboost_observed19_hard": [
+      0.3,
+      0.76
+    ],
+    "logit_hard": [
+      0.31,
+      0.38
+    ],
+    "pca48_hard": [
+      0.27,
+      0.44
+    ],
+    "full_hard": [
+      0.28,
+      0.47
+    ],
+    "standalone_transformer": [
+      0.23,
+      0.41
+    ],
+    "sequence_lstm": [
+      0.26,
+      0.42
+    ],
+    "snapshot_lstm": [
+      0.36,
+      0.67
+    ]
+  },
+  "train_populations": {
+    "outer_student_fit": {
+      "full_clock": {
+        "rows": 82786,
+        "positive": 46409,
+        "negative": 36377,
+        "cases_with_queries": 10311,
+        "positive_fraction": 0.5605899548232793
+      },
+      "predeadline": {
+        "rows": 50120,
+        "positive": 13743,
+        "negative": 36377,
+        "cases_with_queries": 10263,
+        "positive_fraction": 0.27420191540303274
+      }
+    },
+    "P0": {
+      "full_clock": {
+        "rows": 32493,
+        "positive": 19653,
+        "negative": 12840,
+        "cases_with_queries": 3108,
+        "positive_fraction": 0.6048379651001754
+      },
+      "predeadline": {
+        "rows": 16709,
+        "positive": 3869,
+        "negative": 12840,
+        "cases_with_queries": 3099,
+        "positive_fraction": 0.23155185827996888
+      }
+    },
+    "P1": {
+      "full_clock": {
+        "rows": 6253,
+        "positive": 3511,
+        "negative": 2742,
+        "cases_with_queries": 996,
+        "positive_fraction": 0.5614904845674077
+      },
+      "predeadline": {
+        "rows": 4032,
+        "positive": 1290,
+        "negative": 2742,
+        "cases_with_queries": 985,
+        "positive_fraction": 0.31994047619047616
+      }
+    },
+    "P2": {
+      "full_clock": {
+        "rows": 8918,
+        "positive": 5099,
+        "negative": 3819,
+        "cases_with_queries": 1093,
+        "positive_fraction": 0.5717649697241534
+      },
+      "predeadline": {
+        "rows": 5170,
+        "positive": 1351,
+        "negative": 3819,
+        "cases_with_queries": 1088,
+        "positive_fraction": 0.26131528046421665
+      }
+    },
+    "P3": {
+      "full_clock": {
+        "rows": 6767,
+        "positive": 3015,
+        "negative": 3752,
+        "cases_with_queries": 1267,
+        "positive_fraction": 0.44554455445544555
+      },
+      "predeadline": {
+        "rows": 5169,
+        "positive": 1417,
+        "negative": 3752,
+        "cases_with_queries": 1259,
+        "positive_fraction": 0.2741342619462178
+      }
+    },
+    "P4": {
+      "full_clock": {
+        "rows": 6595,
+        "positive": 3115,
+        "negative": 3480,
+        "cases_with_queries": 1032,
+        "positive_fraction": 0.4723275208491281
+      },
+      "predeadline": {
+        "rows": 5163,
+        "positive": 1683,
+        "negative": 3480,
+        "cases_with_queries": 1026,
+        "positive_fraction": 0.32597327135386406
+      }
+    },
+    "P5": {
+      "full_clock": {
+        "rows": 8908,
+        "positive": 4367,
+        "negative": 4541,
+        "cases_with_queries": 1313,
+        "positive_fraction": 0.4902334979793444
+      },
+      "predeadline": {
+        "rows": 6202,
+        "positive": 1661,
+        "negative": 4541,
+        "cases_with_queries": 1309,
+        "positive_fraction": 0.2678168332795872
+      }
+    },
+    "PURGED": {
+      "full_clock": {
+        "rows": 12852,
+        "positive": 7649,
+        "negative": 5203,
+        "cases_with_queries": 1502,
+        "positive_fraction": 0.5951602863367569
+      },
+      "predeadline": {
+        "rows": 7675,
+        "positive": 2472,
+        "negative": 5203,
+        "cases_with_queries": 1497,
+        "positive_fraction": 0.32208469055374594
+      }
+    },
+    "final_fit": {
+      "full_clock": {
+        "rows": 54431,
+        "positive": 31278,
+        "negative": 23153,
+        "cases_with_queries": 6464,
+        "positive_fraction": 0.5746357774062575
+      },
+      "predeadline": {
+        "rows": 31080,
+        "positive": 7927,
+        "negative": 23153,
+        "cases_with_queries": 6431,
+        "positive_fraction": 0.25505148005148004
+      }
+    },
+    "final_calibration": {
+      "full_clock": {
+        "rows": 6595,
+        "positive": 3115,
+        "negative": 3480,
+        "cases_with_queries": 1032,
+        "positive_fraction": 0.4723275208491281
+      },
+      "predeadline": {
+        "rows": 5163,
+        "positive": 1683,
+        "negative": 3480,
+        "cases_with_queries": 1026,
+        "positive_fraction": 0.32597327135386406
+      }
+    },
+    "final_threshold_selection": {
+      "full_clock": {
+        "rows": 8908,
+        "positive": 4367,
+        "negative": 4541,
+        "cases_with_queries": 1313,
+        "positive_fraction": 0.4902334979793444
+      },
+      "predeadline": {
+        "rows": 6202,
+        "positive": 1661,
+        "negative": 4541,
+        "cases_with_queries": 1309,
+        "positive_fraction": 0.2678168332795872
+      }
+    }
+  },
+  "historical_test": {
+    "historical_raw_query_rows": 531363,
+    "historical_unique_query_keys": 128389,
+    "raw_duplicate_rows_not_independent": 402974,
+    "eligible_queries": 39775,
+    "eligible_cases": 7146,
+    "eligible_positive_queries": 5410,
+    "excluded_unique_queries": 88614,
+    "prior_on_time_candidate_queries": 48376
+  },
+  "recognition": {
+    "cases": 3612,
+    "full_clock_rows": 22270,
+    "strictly_predeadline_rows": 16534,
+    "at_or_after_archived_deadline_rows": 5736,
+    "delayed_cases": 1395,
+    "observed_clean_cases": 2217,
+    "ever_archived_deadline_passed_cases": 1150,
+    "ever_archived_deadline_passed_delayed_cases": 1150,
+    "ever_archived_deadline_passed_clean_cases": 0,
+    "flagged_delayed_case_first_flag_on_target_interval": 1150,
+    "flagged_delayed_case_first_flag_on_other_interval": 0,
+    "delayed_cases_with_no_late_marker": 245,
+    "observed_clean_cases_with_no_late_marker": 2217,
+    "cases_with_a_strictly_predeadline_query": 3594,
+    "cases_with_a_D5_opportunity": 3451,
+    "retrospective_case_flag_precision_given_known_completed_next": 1.0,
+    "retrospective_case_flag_recall_given_known_completed_next": 0.8243727598566308,
+    "all_strict_advance_warning_TP_D0_D1_D5_D10_D15": 0
+  },
+  "anchors": {
+    "total": 95181,
+    "observed_next": 72624,
+    "unknown_next": 22557,
+    "candidate_cases": 33129,
+    "observed_cases": 31543,
+    "unknown_cases": 22557,
+    "overlap_cases": 20971
+  },
+  "older_private_train_val": {
+    "train": {
+      "events": 794467,
+      "cases": 83061,
+      "zero_transport_cases": 3893,
+      "one_transport_cases": 32927,
+      "at_least_two_transport_cases": 46241,
+      "tau_cases": 24904,
+      "tau_rows": 128012
+    },
+    "val": {
+      "events": 32517,
+      "cases": 3407,
+      "zero_transport_cases": 172,
+      "one_transport_cases": 1374,
+      "at_least_two_transport_cases": 1861,
+      "tau_cases": 1039,
+      "tau_rows": 5408
+    }
+  },
+  "legacy_source_flow": {
+    "input_event_rows": 2000000,
+    "retained_event_rows": 1406921,
+    "consecutive_duplicate_events_removed": 593079,
+    "retained_case_segments": 133055
+  },
+  "revised_processed_train": {
+    "events": 874844,
+    "cases": 82930,
+    "category_counts": {
+      "administration": 491930,
+      "transport": 344907,
+      "user_entry": 36245,
+      "problem": 1762
+    },
+    "medians": {
+      "administration": 6.0,
+      "transport": 4.0,
+      "user_entry": 0.0
+    }
+  },
+  "localization": {
+    "DL": {
+      "tp": 2549,
+      "fp": 2685,
+      "fn": 874,
+      "tn": 7728
+    },
+    "AC": {
+      "tp": 2549,
+      "fp": 6317,
+      "fn": 874,
+      "tn": 28048
+    }
+  }
+}

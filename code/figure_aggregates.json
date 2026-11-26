@@ -1,0 +1,223 @@
+{
+  "shap": {
+    "scope": "TRAIN P5 case-equal absolute raw-margin SHAP; descriptive noncausal model dependence",
+    "cohorts": [
+      {
+        "cohort": "full_recorded_clock",
+        "n_cases": 1313,
+        "n_rows": 8908,
+        "shares": {
+          "observed19": 0.15153007703558286,
+          "teacher_logit": 0.3237628691704297,
+          "teacher_PCA48": 0.5247070537939873
+        },
+        "top_operational_features": [
+          {
+            "feature": "momentum_if_event_end",
+            "case_equal_abs_SHAP_share": 0.02535509916875743
+          },
+          {
+            "feature": "observed_transport_60m_event_end",
+            "case_equal_abs_SHAP_share": 0.014075726686362866
+          },
+          {
+            "feature": "ewma_if_event_end",
+            "case_equal_abs_SHAP_share": 0.01260827201666088
+          },
+          {
+            "feature": "observed_transport_global_5m",
+            "case_equal_abs_SHAP_share": 0.009972154634550484
+          },
+          {
+            "feature": "observed_transport_count_case_at_tau",
+            "case_equal_abs_SHAP_share": 0.009682110576761669
+          },
+          {
+            "feature": "burstiness_cv_60m_event_end",
+            "case_equal_abs_SHAP_share": 0.009658288776905876
+          }
+        ]
+      },
+      {
+        "cohort": "strict_pre_archived_deadline",
+        "n_cases": 1309,
+        "n_rows": 6202,
+        "shares": {
+          "observed19": 0.15481021391217165,
+          "teacher_logit": 0.325510430085169,
+          "teacher_PCA48": 0.5196793560026594
+        },
+        "top_operational_features": [
+          {
+            "feature": "momentum_if_event_end",
+            "case_equal_abs_SHAP_share": 0.026540880911233553
+          },
+          {
+            "feature": "observed_transport_60m_event_end",
+            "case_equal_abs_SHAP_share": 0.014729567432304537
+          },
+          {
+            "feature": "ewma_if_event_end",
+            "case_equal_abs_SHAP_share": 0.012768839176413109
+          },
+          {
+            "feature": "burstiness_cv_60m_event_end",
+            "case_equal_abs_SHAP_share": 0.010006048178532467
+          },
+          {
+            "feature": "observed_transport_count_case_at_tau",
+            "case_equal_abs_SHAP_share": 0.009998110069423178
+          },
+          {
+            "feature": "observed_transport_global_5m",
+            "case_equal_abs_SHAP_share": 0.009786627603649558
+          }
+        ]
+      },
+      {
+        "cohort": "at_least_D5_before_archived_deadline",
+        "n_cases": 1251,
+        "n_rows": 5566,
+        "shares": {
+          "observed19": 0.15885693371981355,
+          "teacher_logit": 0.3236074190135566,
+          "teacher_PCA48": 0.5175356472666299
+        },
+        "top_operational_features": [
+          {
+            "feature": "momentum_if_event_end",
+            "case_equal_abs_SHAP_share": 0.0276797131636274
+          },
+          {
+            "feature": "observed_transport_60m_event_end",
+            "case_equal_abs_SHAP_share": 0.01512479452151328
+          },
+          {
+            "feature": "ewma_if_event_end",
+            "case_equal_abs_SHAP_share": 0.012811712711905674
+          },
+          {
+            "feature": "burstiness_cv_60m_event_end",
+            "case_equal_abs_SHAP_share": 0.01043696133419269
+          },
+          {
+            "feature": "observed_transport_count_case_at_tau",
+            "case_equal_abs_SHAP_share": 0.01020731363233847
+          },
+          {
+            "feature": "observed_transport_global_5m",
+            "case_equal_abs_SHAP_share": 0.009955063660852335
+          }
+        ]
+      },
+      {
+        "cohort": "at_least_D10_before_archived_deadline",
+        "n_cases": 1160,
+        "n_rows": 4831,
+        "shares": {
+          "observed19": 0.16381229758909815,
+          "teacher_logit": 0.32353588340768147,
+          "teacher_PCA48": 0.5126518190032205
+        },
+        "top_operational_features": [
+          {
+            "feature": "momentum_if_event_end",
+            "case_equal_abs_SHAP_share": 0.028821813847205273
+          },
+          {
+            "feature": "observed_transport_60m_event_end",
+            "case_equal_abs_SHAP_share": 0.015444979633078077
+          },
+          {
+            "feature": "ewma_if_event_end",
+            "case_equal_abs_SHAP_share": 0.013012834831389288
+          },
+          {
+            "feature": "burstiness_cv_60m_event_end",
+            "case_equal_abs_SHAP_share": 0.010964565739376002
+          },
+          {
+            "feature": "observed_transport_count_case_at_tau",
+            "case_equal_abs_SHAP_share": 0.010363622837699536
+          },
+          {
+            "feature": "observed_transport_global_5m",
+            "case_equal_abs_SHAP_share": 0.010217346747202804
+          }
+        ]
+      }
+    ]
+  },
+  "teacher": {
+    "scope": "TRAIN fit and early-stop selection only, not independent evaluation",
+    "fit_queries": 67471,
+    "early_stop_queries": 12313,
+    "selected_epoch": 5,
+    "history": [
+      {
+        "epoch": 1,
+        "fit_bce": 0.21598079687167485,
+        "stop_bce": 0.2019901616570076,
+        "stop_AP": 0.8178820741814922,
+        "stop_weighted_AP": 0.6235495208591243,
+        "stop_AUROC": 0.9028613604581573
+      },
+      {
+        "epoch": 2,
+        "fit_bce": 0.17437811061502448,
+        "stop_bce": 0.21563196090282674,
+        "stop_AP": 0.8456358427328885,
+        "stop_weighted_AP": 0.6743163711153867,
+        "stop_AUROC": 0.9193309026334527
+      },
+      {
+        "epoch": 3,
+        "fit_bce": 0.1606708206717356,
+        "stop_bce": 0.17429512483107878,
+        "stop_AP": 0.8531145132252295,
+        "stop_weighted_AP": 0.712694967897658,
+        "stop_AUROC": 0.9239753754223154
+      },
+      {
+        "epoch": 4,
+        "fit_bce": 0.15533561220054204,
+        "stop_bce": 0.1806222934379763,
+        "stop_AP": 0.8516925023854505,
+        "stop_weighted_AP": 0.6954176964759458,
+        "stop_AUROC": 0.92028061379713
+      },
+      {
+        "epoch": 5,
+        "fit_bce": 0.1499515655112152,
+        "stop_bce": 0.16276177218852075,
+        "stop_AP": 0.8645662009049263,
+        "stop_weighted_AP": 0.7268307761611011,
+        "stop_AUROC": 0.9294556393327978
+      },
+      {
+        "epoch": 6,
+        "fit_bce": 0.1463305579401341,
+        "stop_bce": 0.19751810076084106,
+        "stop_AP": 0.8447852174890776,
+        "stop_weighted_AP": 0.6799802987089907,
+        "stop_AUROC": 0.9218264952461876
+      },
+      {
+        "epoch": 7,
+        "fit_bce": 0.14315709262704876,
+        "stop_bce": 0.1856943700951306,
+        "stop_AP": 0.8527090526226493,
+        "stop_weighted_AP": 0.7112242713735445,
+        "stop_AUROC": 0.9238117632550871
+      },
+      {
+        "epoch": 8,
+        "fit_bce": 0.14096699911145139,
+        "stop_bce": 0.2082391080453946,
+        "stop_AP": 0.8451059475850283,
+        "stop_weighted_AP": 0.6733501053461317,
+        "stop_AUROC": 0.9203471065931917
+      }
+    ]
+  }
+}
